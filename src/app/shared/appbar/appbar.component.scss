@@ -1,0 +1,30 @@
+@import "../../../variables";
+@import "../../../keyframes";
+
+.appbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+
+  .option {
+    height: 100%;
+    background: none;
+    border: none;
+
+    &:hover {
+      animation: fade-in ease 0.2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      background-color: $secondary_blue;
+      color: $secondary_sand;
+    }
+
+    &:first-child {
+        margin-right: 0;
+    }
+    
+    > * {
+        margin: 0 16px;
+    }
+  }
+}
