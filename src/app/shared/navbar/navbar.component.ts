@@ -3,12 +3,12 @@ import { BarOptions } from './models/bar-options';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-appbar',
+  selector: 'app-navbar',
   standalone: false,
-  templateUrl: './appbar.component.html',
-  styleUrl: './appbar.component.scss',
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.scss',
 })
-export class AppbarComponent {
+export class NavbarComponent {
   constructor(private router: Router) {
 
   }
