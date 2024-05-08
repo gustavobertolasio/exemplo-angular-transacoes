@@ -1,1 +1,119 @@
-/* You can add global styles to this file, and also import other style files */
+@import "reset-css";
+@import "variables";
+@import "keyframes";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.page {
+  animation: fade-in ease 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  margin: 16px 24px 32px;
+}
+
+.primary {
+  background-color: $primary_blue;
+  color: $silver;
+
+  button{
+    color: $silver;
+  }
+}
+
+.secondary {
+  background-color: $secondary_blue;
+  color: $secondary_sand;
+
+  button{
+    color: $secondary_sand;
+  }
+}
+
+.m {
+  &x {
+    &1 {
+      margin: 0 8px;
+    }
+
+    &2 {
+      margin: 0 16px;
+    }
+
+    &3 {
+      margin: 0 24px;
+    }
+  }
+
+  &y {
+    &1 {
+      margin: 8px 0;
+    }
+
+    &2 {
+      margin: 16px 0;
+    }
+
+    &3 {
+      margin: 24px 0;
+    }
+  }
+
+  &1 {
+    margin: 8px;
+  }
+
+  &2 {
+    margin: 16px;
+  }
+
+  &3 {
+    margin: 24px;
+  }
+}
+
+.p {
+  &x {
+    &1 {
+      padding: 0 8px;
+    }
+
+    &2 {
+      padding: 0 16px;
+    }
+
+    &3 {
+      padding: 0 24px;
+    }
+  }
+
+  &y {
+    &1 {
+      padding: 8px 0;
+    }
+
+    &2 {
+      padding: 16px 0;
+    }
+
+    &3 {
+      padding: 24px 0;
+    }
+  }
+
+  &1 {
+    padding: 8px;
+  }
+
+  &2 {
+    padding: 16px;
+  }
+
+  &3 {
+    padding: 24px;
+  }
+}
