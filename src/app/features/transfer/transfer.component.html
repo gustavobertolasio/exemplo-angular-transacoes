@@ -1,3 +1,11 @@
-<div class="page">
-  <p>transfer works!</p>
+<div class="page container center-horizontal">
+  <div class="container column transfer-container px3 space-between">
+    <router-outlet></router-outlet>
+
+    <div class="container end-horizontal pb3">
+      <app-button
+        [param]="{ label: 'Próximo', onClick: nextStep }"
+      ></app-button>
+    </div>
+  </div>
 </div>

@@ -9,23 +9,26 @@ import { Router } from '@angular/router';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  constructor(private router: Router) {
-
-  }
+  constructor(private router: Router) {}
 
   // ngOnInit(): void {
   //   throw new Error('Method not implemented.');
   // }
 
-  barOptions: BarOptions[] = [{
-    label: 'Transferir',
-    arialabel: "Transferir fundos",
-    onClick: () => {this.router.navigateByUrl("/transferir")}
-  },
-  {
-    label: 'Agendamentos',
-    arialabel: "Transferencias agendadas",
-    onClick: () => {this.router.navigateByUrl("/transferencias-agendadas")}
-  }];
-
+  barOptions: BarOptions[] = [
+    {
+      label: 'Transferir',
+      arialabel: 'Transferir fundos',
+      onClick: () => {
+        this.router.navigateByUrl('/transferir');
+      },
+    },
+    {
+      label: 'Agendamentos',
+      arialabel: 'Transferencias agendadas',
+      onClick: () => {
+        this.router.navigateByUrl('/transferencias-agendadas');
+      },
+    },
+  ];
 }

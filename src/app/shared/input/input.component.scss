@@ -1,0 +1,29 @@
+@import "../../../styles/variables";
+
+.input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid $primary_blue;
+  transition: 0.5s;
+  background-color: white;
+
+
+  input {
+    border: none;
+    border-radius: 33px;
+    width: 100%;
+    min-height: 14px;
+
+    &:focus,
+    &:focus-visible {
+      border: none;
+      outline: none;
+    }
+  }
+
+  img {
+    color: $primary_blue;
+  }
+}
