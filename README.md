@@ -1,25 +1,30 @@
 # Transacoes
 
-Transacoes is a financial platform that let users to transfer and receive fictional money, providing ways to handle historical data.
+Transacoes é uma plataforma financeira que permite a transferência de dinheiro fictício entre usuários, listando tudo em histórico.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+O projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 17.3.6.
 
-## Development server
+## Servidores 
+O projeto utiliza de arquivos environment para configurar variáveis de ambiente de acordo com o ambiente a ser deployado.
 
-Run `ng serve` for a dev server. 
+### De desenvolvimento
+Para subir o ambiente de desenvolvimento, basta rodar `npm run start:dev`.
 
-Navigate to `http://localhost:4200/`.
+O ambiente fica disponível em `http://localhost:4200/`.
 
-## Build
+## Testes unitários
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Por enquanto os testes não foram alterados, mas o objetivo é trazer o coverage para 90%.
 
-## Running unit tests
+## Testes end-to-end
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Não foi adicionado uma biblioteca de testes end-to-end, mas a biblioteca de escolha é o Cypress utilizando Cucumber.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Cypress por ser uma ferramenta que utilizei durante grande parte da minha trajetória profissional e Cucumber para, caso haja participação de algum PM fictício, os testes façam sentido e possam até ser utilizados em relatórios, etc.
 
 
+## Escolha de arquitetura
+A arquitetura escolhida foi feature-based, onde cada feature é alocada em seu respectivo modulo, bem como seus serviços, componentes, pipes, diretivas, stores, etc. No caso de "transferência bancária" e "listagem de transferências agendadas", entendo que são funcionalidades de um mesmo contexto: transferir dinheiro. Portanto, estão dentro do mesmo módulo.
+
+Dentro de core, deixei apenas configurações que podem ser usadas genéricamente, como configuração de store e de icones.
+Dentro de shared, deixei componentes que serão utilizados durante toda a aplicação.
