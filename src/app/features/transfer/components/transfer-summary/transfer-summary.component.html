@@ -1,0 +1,46 @@
+<div class="container column">
+  <div class="">
+    <h3 class="pb1">Conta de origem</h3>
+    <h3 class="lighter">{{ transferStore.state.originAccount }}</h3>
+  </div>
+  <div class="pt2">
+    <h3 class="pb1">Conta de destino</h3>
+    <h3 class="lighter">{{ transferStore.state.destinationAccount }}</h3>
+  </div>
+  <div class="pt2">
+    <h3 class="pb1">Data de agendamento</h3>
+    <h3 class="lighter">
+      {{ transferStore.state.transferDate | date : "shortDate" }}
+    </h3>
+  </div>
+  <div class="pt2">
+    <h3 class="pb1">Data de transferência</h3>
+    <h3 class="lighter">
+      {{ transferStore.state.scheduledOperationDate | date : "shortDate" }}
+    </h3>
+  </div>
+  <div class="pt2">
+    <h3 class="pb1">Taxa de transferência</h3>
+    <h3 class="lighter">{{ transferStore.state.transferTax }}</h3>
+  </div>
+  <div class="pt2">
+    <h3 class="pb1">Valor a transferir</h3>
+    <h3 class="lighter">
+      {{
+        transferStore.state.amount
+          | currency : "BRL" : "symbol-narrow" : "2.2-2"
+      }}
+    </h3>
+  </div>
+
+  <div class="pt2">
+    <h3 class="pb1">Valor com taxa</h3>
+    <h3 class="lighter">
+      {{
+        (transferStore.state.transferTax / 100) * transferStore.state.amount +
+          transferStore.state.amount
+          | currency : "BRL" : "symbol-narrow" : "2.2-2"
+      }}
+    </h3>
+  </div>
+</div>

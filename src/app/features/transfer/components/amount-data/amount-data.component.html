@@ -1,0 +1,28 @@
+<div class="container column">
+  <form [formGroup]="form">
+    <div class="pb2">
+      <label [ngClass]="'pb1'">Valor de transferência</label>
+      <div [ngClass]="'input'">
+        <input [ngClass]="'px2 py1'" formControlName="amount" />
+      </div>
+    </div>
+    <div class="pb2">
+      <label [ngClass]="'pb1'">Taxa de transferência</label>
+
+      <div [ngClass]="'pl2'">
+        <h3>
+          {{ getTaxAmount() | currency : "BRL" : "symbol-narrow" : "2.2-2" }}
+        </h3>
+      </div>
+    </div>
+
+    <div>
+      <label [ngClass]="'pb1'">Valor a ser cobrado</label>
+      <div [ngClass]="'pl2'">
+        <h3>
+          {{ getFinalAmount() | currency : "BRL" : "symbol-narrow" : "2.2-2" }}
+        </h3>
+      </div>
+    </div>
+  </form>
+</div>

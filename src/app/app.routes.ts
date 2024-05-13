@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { TransferComponent } from './features/transfer/transfer.component';
-import { ScheduledTransferComponent } from './features/scheduled-transfer/scheduled-transfer.component';
-import { TransferDataComponent } from './features/transfer/transfer-data/transfer-data.component';
-import { AmountDataComponent } from './features/transfer/amount-data/amount-data.component';
-import { TransferSummaryComponent } from './features/transfer/transfer-summary/transfer-summary.component';
+import { TransferComponent } from './features/transfer/pages/transfer-page/transfer.component';
+import { TransferDataComponent } from './features/transfer/components/transfer-data/transfer-data.component';
+import { AmountDataComponent } from './features/transfer/components/amount-data/amount-data.component';
+import { TransferSummaryComponent } from './features/transfer/components/transfer-summary/transfer-summary.component';
+import { ScheduledTransferComponent } from './features/transfer/pages/scheduled-transfer-page/scheduled-transfer.component';
 
 export const routes: Routes = [
   {
@@ -33,9 +33,5 @@ export const routes: Routes = [
   {
     path: 'transferencias-agendadas',
     component: ScheduledTransferComponent,
-    loadChildren: () =>
-      import('./features/scheduled-transfer/scheduled-transfer.module').then(
-        (m) => m.ScheduledTransferModule
-      ),
   },
 ];

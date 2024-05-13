@@ -1,0 +1,18 @@
+<div class="page container center-horizontal">
+  <div class="container column transfer-container px3">
+    <h1 class="pt3">{{ stepName }}</h1>
+    <div class="container column  fill-parent space-between">
+      <router-outlet></router-outlet>
+
+      <div class="container end-horizontal pb3">
+        <app-button
+          [param]="{
+            label: steps[step].buttonText,
+            onClick: steps[step].onClick,
+            disabled: !nextStepEnabled
+          }"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>
