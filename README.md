@@ -8,7 +8,7 @@ O projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angular
 O projeto utiliza de arquivos environment para configurar variáveis de ambiente de acordo com o ambiente a ser deployado.
 
 ### De desenvolvimento
-Para subir o ambiente de desenvolvimento, basta rodar `npm run start:dev`.
+Após dar npm install, para subir o ambiente de desenvolvimento basta rodar `npm run start:dev`.
 
 O ambiente fica disponível em `http://localhost:4200/`.
 
